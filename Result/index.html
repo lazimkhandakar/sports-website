@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Results — Northfield University Sports</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-brand">
+      <div class="nav-logo">⚜</div>
+      <div class="nav-name">NORTHFIELD <span>UNIVERSITY</span></div>
+    </a>
+    <ul class="nav-links">
+         <li><a href="../Home page/index.html">Home</a></li>
+        <li><a href="../Fixtures page/index.html">Fixtures</a></li>
+        <li><a href="index.html" class="active">Players</a></li>
+        <li><a href="../Teams/index.html">Teams</a></li>
+        <li><a href="../Result/index.html" class="active">Results</a></li>
+        <li><a href="../About/index.html">About</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="nav-icon" id="searchIcon">🔍</div>
+      <div class="nav-icon">👤</div>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+       <li><a href="../Home page/index.html">Home</a></li>
+        <li><a href="../Fixtures page/index.html">Fixtures</a></li>
+        <li><a href="index.html" class="active">Players</a></li>
+        <li><a href="../Teams/index.html">Teams</a></li>
+        <li><a href="../Result/index.html" class="active">Results</a></li>
+        <li><a href="../About/index.html">About</a></li>
+  </div>
+
+  <!-- SEARCH BAR -->
+  <div class="search-bar" id="searchBar">
+    <div class="search-inner">
+      <input type="text" id="searchInput" placeholder="Search results, teams, sports..." />
+      <button id="searchClose">✕</button>
+    </div>
+  </div>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="#">Home</a> / Results
+  </div>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="page-header-inner">
+      <div class="page-header-text">
+        <p class="hero-eyebrow">2024–25 Season · Northfield University</p>
+        <h1 class="page-title">Match Results</h1>
+        <p class="page-subtitle">Browse all completed match results, scores, and detailed statistics across all sports and departments.</p>
+      </div>
+      <div class="header-stats">
+        <div class="hstat fade-in">
+          <div class="hstat-num" data-target="45">0</div>
+          <div class="hstat-label">Matches Played</div>
+        </div>
+        <div class="hstat fade-in">
+          <div class="hstat-num" data-target="28">0</div>
+          <div class="hstat-label">Wins</div>
+        </div>
+        <div class="hstat fade-in">
+          <div class="hstat-num" data-target="10">0</div>
+          <div class="hstat-label">Draws</div>
+        </div>
+        <div class="hstat fade-in">
+          <div class="hstat-num" data-target="7">0</div>
+          <div class="hstat-label">Losses</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-layout">
+
+    <!-- SIDEBAR FILTERS -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <span>🎛 Filters</span>
+        <button class="reset-btn" id="resetFilters">Reset All</button>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-label">Sport Type</div>
+        <label class="checkbox-row"><input type="checkbox" value="Football" checked /> <span>Football</span></label>
+        <label class="checkbox-row"><input type="checkbox" value="Cricket" /> <span>Cricket</span></label>
+        <label class="checkbox-row"><input type="checkbox" value="Basketball" /> <span>Basketball</span></label>
+        <label class="checkbox-row"><input type="checkbox" value="Badminton" /> <span>Badminton</span></label>
+        <label class="checkbox-row"><input type="checkbox" value="Tennis" /> <span>Tennis</span></label>
+        <label class="checkbox-row"><input type="checkbox" value="Volleyball" /> <span>Volleyball</span></label>
+      </div>
+
+      <div class="filter-divider"></div>
+
+      <div class="filter-group">
+        <div class="filter-label">Result</div>
+        <label class="checkbox-row"><input type="checkbox" value="Win" checked /> <span>Win</span></label>
+        <label class="checkbox-row"><input type="checkbox" value="Draw" /> <span>Draw</span></label>
+        <label class="checkbox-row"><input type="checkbox" value="Loss" /> <span>Loss</span></label>
+      </div>
+
+      <div class="filter-divider"></div>
+
+      <div class="filter-group">
+        <div class="filter-label">Date Range</div>
+        <div class="date-field">
+          <label>From Date</label>
+          <input type="date" id="dateFrom" value="2025-01-01" />
+        </div>
+        <div class="date-field" style="margin-top:10px;">
+          <label>To Date</label>
+          <input type="date" id="dateTo" value="2025-06-01" />
+        </div>
+      </div>
+
+      <div class="filter-divider"></div>
+
+      <div class="filter-group">
+        <div class="filter-label">Department</div>
+        <select id="deptFilter">
+          <option value="">All Departments</option>
+          <option>Computer Science</option>
+          <option>Business Studies</option>
+          <option>Civil Engineering</option>
+          <option>Electronics</option>
+          <option>Law Department</option>
+          <option>Mechanical Engg.</option>
+        </select>
+      </div>
+
+      <button class="apply-btn" id="applyFilters">🎛 Apply Filters</button>
+    </aside>
+
+    <!-- RESULTS PANEL -->
+    <div class="results-panel">
+
+      <!-- SPORT TABS + EXPORT -->
+      <div class="panel-top">
+        <div class="sport-tabs" id="sportTabs">
+          <button class="tab-btn active" data-sport="all">🗂 All Sports</button>
+          <button class="tab-btn" data-sport="Football">⚽ Football</button>
+          <button class="tab-btn" data-sport="Cricket">🏏 Cricket</button>
+          <button class="tab-btn" data-sport="Basketball">🏀 Basketball</button>
+          <button class="tab-btn" data-sport="Badminton">🏸 Badminton</button>
+          <button class="tab-btn" data-sport="Tennis">🎾 Tennis</button>
+        </div>
+        <button class="export-btn" id="exportBtn">⬇ Export Results</button>
+      </div>
+
+      <!-- RESULTS TABLE -->
+      <div class="table-wrap">
+        <table class="results-table" id="resultsTable">
+          <thead>
+            <tr>
+              <th>Match ID</th>
+              <th>Sport</th>
+              <th colspan="3">Teams</th>
+              <th>Score</th>
+              <th>Date</th>
+              <th>Venue</th>
+              <th>Result</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <!-- Populated by JS -->
+          </tbody>
+        </table>
+        <div class="no-results" id="noResults" style="display:none;">
+          <span>🔍</span>
+          <p>No results found for the selected filters.</p>
+          <button onclick="document.getElementById('resetFilters').click()">Clear Filters</button>
+        </div>
+      </div>
+
+      <!-- PAGINATION -->
+      <div class="pagination-row">
+        <span class="pagination-info" id="paginationInfo">Showing 1–10 of 45 results</span>
+        <div class="pagination" id="pagination"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MATCH DETAIL MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="matchModal">
+      <button class="modal-close" id="modalClose">✕</button>
+
+      <div class="modal-sport-badge" id="modalSportBadge"></div>
+      <div class="modal-meta" id="modalMeta"></div>
+
+      <div class="modal-score-block" id="modalScoreBlock"></div>
+
+      <div class="modal-tabs">
+        <button class="modal-tab active" data-tab="summary">Match Summary</button>
+        <button class="modal-tab" data-tab="lineups">Team Lineups</button>
+        <button class="modal-tab" data-tab="stats">Statistics</button>
+      </div>
+
+      <div class="modal-tab-content" id="modalTabContent"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-row">
+            <div class="footer-logo">⚜</div>
+            <div class="footer-brand-name">NORTHFIELD<br /><span>UNIVERSITY</span></div>
+          </div>
+          <p class="footer-brand-tagline">Excellence in education.<br />Leadership in sports.<br />Preparing champions for life.</p>
+          <div class="footer-social">
+            <div class="social-btn">f</div>
+            <div class="social-btn">𝕏</div>
+            <div class="social-btn">▶</div>
+            <div class="social-btn">in</div>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Quick Links</div>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Fixtures</a></li>
+            <li><a href="#">Teams</a></li>
+            <li><a href="#" class="active-link">Results</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Teams</div>
+          <ul>
+            <li><a href="#">Men's Teams</a></li>
+            <li><a href="#">Women's Teams</a></li>
+            <li><a href="#">Academy</a></li>
+            <li><a href="#">Clubs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">About</div>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Facilities</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Connect</div>
+          <ul>
+            <li><a href="#">sports@northfield.edu</a></li>
+            <li><a href="#">www.northfield.edu</a></li>
+            <li><a href="#">+1 (555) 200-1895</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© 2024 Northfield University. All Rights Reserved.</span>
+        <span class="footer-copy">Privacy Policy · Terms of Use</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
