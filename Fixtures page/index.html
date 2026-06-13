@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fixtures — Northfield University</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════ -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../Home page/index.html" class="nav-brand">
+        <div class="nav-logo-icon">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <rect width="40" height="40" rx="5" fill="rgba(255,255,255,0.12)"/>
+            <path d="M20 7L23.5 16H33L25.5 21.5L28.5 31L20 25.5L11.5 31L14.5 21.5L7 16H16.5L20 7Z" fill="white" opacity="0.9"/>
+            <rect x="11" y="31" width="18" height="2" rx="1" fill="white" opacity="0.4"/>
+          </svg>
+        </div>
+        <div class="nav-brand-text">
+          <span class="nav-brand-main">NORTHFIELD</span>
+          <span class="nav-brand-sub">UNIVERSITY</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../Home page/index.html">Home</a></li>
+        <li><a href="index.html" class="active">Fixtures</a></li>
+        <li><a href="../Players page/index.html">Players</a></li>
+        <li><a href="#">Teams</a></li>
+        <li><a href="#">Results</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="nav-icon-btn" aria-label="Search">
+          <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="nav-icon-btn" aria-label="Account">
+          <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════
+       PAGE HEADER
+  ══════════════════════════════════════════ -->
+  <div class="page-header">
+    <div class="container page-header-inner">
+      <div>
+        <h1 class="page-title">Fixtures</h1>
+        <p class="page-sub">Browse all upcoming, live, and completed matches across all sports.</p>
+      </div>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../Home page/index.html">Home</a>
+        <span class="bc-sep">/</span>
+        <span class="bc-current">Fixtures</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       MAIN LAYOUT
+  ══════════════════════════════════════════ -->
+  <main class="main">
+    <div class="container layout">
+
+      <!-- ── SIDEBAR FILTERS ── -->
+      <aside class="sidebar">
+        <div class="filter-card">
+          <div class="filter-header">
+            <div class="filter-header-left">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+              <span>Filters</span>
+            </div>
+            <button class="reset-btn" id="resetBtn">Reset All</button>
+          </div>
+
+          <!-- Sport Type -->
+          <div class="filter-section">
+            <div class="filter-section-header" data-toggle="sportType">
+              <span>Sport Type</span>
+              <svg class="chevron" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+            </div>
+            <div class="filter-section-body" id="sportType">
+              <label class="check-label">
+                <input type="checkbox" name="sport" value="Football" checked />
+                <span class="checkmark"></span>
+                Football
+              </label>
+              <label class="check-label">
+                <input type="checkbox" name="sport" value="Cricket" />
+                <span class="checkmark"></span>
+                Cricket
+              </label>
+              <label class="check-label">
+                <input type="checkbox" name="sport" value="Basketball" />
+                <span class="checkmark"></span>
+                Basketball
+              </label>
+              <label class="check-label">
+                <input type="checkbox" name="sport" value="Badminton" />
+                <span class="checkmark"></span>
+                Badminton
+              </label>
+              <label class="check-label">
+                <input type="checkbox" name="sport" value="Tennis" />
+                <span class="checkmark"></span>
+                Tennis
+              </label>
+            </div>
+          </div>
+
+          <!-- Date Range -->
+          <div class="filter-section">
+            <div class="filter-section-header" data-toggle="dateRange">
+              <span>Date Range</span>
+              <svg class="chevron" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+            </div>
+            <div class="filter-section-body" id="dateRange">
+              <div class="date-field">
+                <label class="date-label">From Date</label>
+                <div class="date-input-wrap">
+                  <input type="date" id="fromDate" value="2025-05-20" class="date-input" />
+                </div>
+              </div>
+              <div class="date-field">
+                <label class="date-label">To Date</label>
+                <div class="date-input-wrap">
+                  <input type="date" id="toDate" value="2025-06-20" class="date-input" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Department -->
+          <div class="filter-section">
+            <div class="filter-section-header" data-toggle="department">
+              <span>Department</span>
+              <svg class="chevron" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+            </div>
+            <div class="filter-section-body" id="department">
+              <select class="dept-select" id="deptSelect">
+                <option value="">All Departments</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Mechanical Engg.">Mechanical Engg.</option>
+                <option value="Business Studies">Business Studies</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Civil Engineering">Civil Engineering</option>
+                <option value="Arts Faculty">Arts Faculty</option>
+                <option value="MBA Department">MBA Department</option>
+                <option value="Law Department">Law Department</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="apply-btn" id="applyBtn">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+            Apply Filters
+          </button>
+        </div>
+      </aside>
+
+      <!-- ── CONTENT ── -->
+      <section class="content">
+
+        <!-- Sport Tabs + Export -->
+        <div class="toolbar">
+          <div class="sport-tabs" id="sportTabs">
+            <button class="sport-tab active" data-sport="All Sports">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              All Sports
+            </button>
+            <button class="sport-tab" data-sport="Football">⚽ Football</button>
+            <button class="sport-tab" data-sport="Cricket">🏏 Cricket</button>
+            <button class="sport-tab" data-sport="Basketball">🏀 Basketball</button>
+            <button class="sport-tab" data-sport="Badminton">🏸 Badminton</button>
+            <button class="sport-tab" data-sport="Tennis">🎾 Tennis</button>
+          </div>
+          <button class="export-btn" id="exportBtn">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Export Fixtures
+          </button>
+        </div>
+
+        <!-- Table -->
+        <div class="table-card">
+          <div class="table-wrap">
+            <table class="fixtures-table" id="fixturesTable">
+              <thead>
+                <tr>
+                  <th>Match ID</th>
+                  <th>Sport</th>
+                  <th colspan="3">Team A vs Team B</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Venue</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody">
+                <!-- Populated by JS -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Table Footer -->
+          <div class="table-footer">
+            <span class="showing-text" id="showingText">Showing 1 to 10 of 45 fixtures</span>
+            <div class="pagination" id="pagination">
+              <button class="page-btn nav-btn" id="prevBtn" disabled>&#8249;</button>
+              <!-- Page buttons injected by JS -->
+              <button class="page-btn nav-btn" id="nextBtn">&#8250;</button>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <script src="/Fixtures page/script.js"></script>
+</body>
+</html>

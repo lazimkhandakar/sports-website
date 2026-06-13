@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arjun Verma — Northfield University</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../Home page/index.html" class="nav-brand">
+        <div class="nav-logo-icon">
+          <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+            <rect width="38" height="38" rx="4" fill="white" fill-opacity="0.12"/>
+            <path d="M19 6L22 14H30L24 19L26 27L19 22L12 27L14 19L8 14H16L19 6Z" fill="white" opacity="0.9"/>
+            <rect x="10" y="28" width="18" height="2" rx="1" fill="white" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="nav-brand-text">
+          <span class="nav-brand-main">NORTHFIELD</span>
+          <span class="nav-brand-sub">UNIVERSITY</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../Home page/index.html">Home</a></li>
+        <li><a href="../Fixtures page/index.html">Fixtures</a></li>
+        <li><a href="index.html" class="active">Players</a></li>
+        <li><a href="#">Teams</a></li>
+        <li><a href="#">Results</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-icon-btn" aria-label="Search" id="searchBtn">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="nav-icon-btn" aria-label="Account">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── BREADCRUMB ── -->
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../Home page/index.html">Home</a>
+        <span class="bc-sep">›</span>
+        <a href="index.html">Players</a>
+        <span class="bc-sep">›</span>
+        <span class="bc-current">Arjun Verma</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ── MAIN CONTENT ── -->
+  <main class="main">
+    <div class="container layout">
+
+      <!-- LEFT SIDEBAR -->
+      <aside class="sidebar">
+        <div class="player-card">
+          <div class="player-photo-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?w=300&h=350&fit=crop&crop=face"
+              alt="Arjun Verma"
+              class="player-photo"
+            />
+          </div>
+          <div class="player-identity">
+            <h1 class="player-name">Arjun Verma</h1>
+            <p class="player-number">#10</p>
+          </div>
+          <div class="player-meta">
+            <div class="meta-row">
+              <span class="meta-icon">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </span>
+              <div class="meta-text">
+                <span class="meta-label">Department</span>
+                <span class="meta-value">Computer Science</span>
+              </div>
+            </div>
+            <div class="meta-row">
+              <span class="meta-icon">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </span>
+              <div class="meta-text">
+                <span class="meta-label">Academic Year</span>
+                <span class="meta-value">3rd Year (2023–2026)</span>
+              </div>
+            </div>
+            <div class="meta-row">
+              <span class="meta-icon">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              </span>
+              <div class="meta-text">
+                <span class="meta-label">Sport</span>
+                <span class="meta-value">Football</span>
+              </div>
+            </div>
+            <div class="meta-row">
+              <span class="meta-icon">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </span>
+              <div class="meta-text">
+                <span class="meta-label">Position</span>
+                <span class="meta-value">Midfielder</span>
+              </div>
+            </div>
+            <div class="meta-row">
+              <span class="meta-icon">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+              </span>
+              <div class="meta-text">
+                <span class="meta-label">Nationality</span>
+                <span class="meta-value">Indian</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- RIGHT CONTENT -->
+      <section class="content">
+
+        <!-- TABS -->
+        <div class="tabs-bar">
+          <button class="tab-btn active" data-tab="stats">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            Stats
+          </button>
+          <button class="tab-btn" data-tab="matchhistory">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Match History
+          </button>
+          <button class="tab-btn" data-tab="bio">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Bio
+          </button>
+        </div>
+
+        <!-- TAB: STATS -->
+        <div class="tab-panel active" id="tab-stats">
+
+          <!-- Season Statistics Table -->
+          <div class="panel-card">
+            <h2 class="panel-title">Season Statistics (2024-25)</h2>
+            <div class="table-wrap">
+              <table class="stats-table">
+                <thead>
+                  <tr>
+                    <th>Competition</th>
+                    <th>Matches</th>
+                    <th>Goals</th>
+                    <th>Assists</th>
+                    <th>Yellow Cards</th>
+                    <th>Red Cards</th>
+                    <th>Minutes Played</th>
+                    <th>Average Rating</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Inter-Department League</td>
+                    <td>8</td>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>720</td>
+                    <td>7.34</td>
+                  </tr>
+                  <tr>
+                    <td>University Cup</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>270</td>
+                    <td>7.50</td>
+                  </tr>
+                  <tr>
+                    <td>Friendly Matches</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>160</td>
+                    <td>7.10</td>
+                  </tr>
+                  <tr class="table-total">
+                    <td>Total</td>
+                    <td>13</td>
+                    <td>8</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1150</td>
+                    <td>7.31</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Match Statistics Breakdown -->
+          <div class="panel-card">
+            <h2 class="panel-title">Match Statistics Breakdown</h2>
+            <div class="breakdown-grid">
+              <div class="breakdown-item">
+                <div class="bd-icon">⚽</div>
+                <div class="bd-num">8</div>
+                <div class="bd-label">Goals</div>
+              </div>
+              <div class="breakdown-item">
+                <div class="bd-icon">👟</div>
+                <div class="bd-num">4</div>
+                <div class="bd-label">Assists</div>
+              </div>
+              <div class="breakdown-item">
+                <div class="bd-icon">⏱</div>
+                <div class="bd-num">1150</div>
+                <div class="bd-label">Minutes Played</div>
+              </div>
+              <div class="breakdown-item">
+                <div class="bd-icon">🎯</div>
+                <div class="bd-num">24</div>
+                <div class="bd-label">Shots on Target</div>
+              </div>
+              <div class="breakdown-item">
+                <div class="bd-icon">⭐</div>
+                <div class="bd-num">7.31</div>
+                <div class="bd-label">Average Rating</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Row: Match History + Bio preview -->
+          <div class="bottom-row">
+
+            <!-- Recent Match History -->
+            <div class="panel-card">
+              <h2 class="panel-title">Recent Match History</h2>
+              <table class="match-table">
+                <tbody>
+                  <tr>
+                    <td class="match-date">18 May 2025</td>
+                    <td class="match-vs">vs</td>
+                    <td class="match-opp">Mechanical Engg.</td>
+                    <td><span class="score score-win">2 - 1</span></td>
+                    <td class="match-comp">Inter-Department League</td>
+                  </tr>
+                  <tr>
+                    <td class="match-date">14 May 2025</td>
+                    <td class="match-vs">vs</td>
+                    <td class="match-opp">Business Studies</td>
+                    <td><span class="score score-win">1 - 0</span></td>
+                    <td class="match-comp">Inter-Department League</td>
+                  </tr>
+                  <tr>
+                    <td class="match-date">10 May 2025</td>
+                    <td class="match-vs">vs</td>
+                    <td class="match-opp">Electrical Engg.</td>
+                    <td><span class="score score-loss">0 - 2</span></td>
+                    <td class="match-comp">University Cup</td>
+                  </tr>
+                  <tr>
+                    <td class="match-date">05 May 2025</td>
+                    <td class="match-vs">vs</td>
+                    <td class="match-opp">Civil Engineering</td>
+                    <td><span class="score score-win">3 - 1</span></td>
+                    <td class="match-comp">Inter-Department League</td>
+                  </tr>
+                  <tr>
+                    <td class="match-date">28 Apr 2025</td>
+                    <td class="match-vs">vs</td>
+                    <td class="match-opp">Arts Faculty</td>
+                    <td><span class="score score-draw">1 - 1</span></td>
+                    <td class="match-comp">Friendly Match</td>
+                  </tr>
+                </tbody>
+              </table>
+              <button class="view-history-btn" data-tab="matchhistory">View Full Match History →</button>
+            </div>
+
+            <!-- Bio Preview -->
+            <div class="panel-card">
+              <h2 class="panel-title">Bio</h2>
+              <p class="bio-intro">Arjun Verma is a dynamic midfielder known for his vision, passing accuracy, and leadership on the field. He has been an integral part of the university football team since his first year.</p>
+              <table class="bio-table">
+                <tbody>
+                  <tr>
+                    <td class="bio-key">Date of Birth</td>
+                    <td class="bio-val">12 March 2004</td>
+                  </tr>
+                  <tr>
+                    <td class="bio-key">Email</td>
+                    <td class="bio-val">arjun.verma@northfield.edu</td>
+                  </tr>
+                  <tr>
+                    <td class="bio-key">Phone</td>
+                    <td class="bio-val">+91 98765 43210</td>
+                  </tr>
+                  <tr>
+                    <td class="bio-key">Achievements</td>
+                    <td class="bio-val">Best Midfielder 2024, Top Scorer 2024</td>
+                  </tr>
+                  <tr>
+                    <td class="bio-key">Interests</td>
+                    <td class="bio-val">Reading, Fitness, Music</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- TAB: MATCH HISTORY -->
+        <div class="tab-panel" id="tab-matchhistory">
+          <div class="panel-card">
+            <h2 class="panel-title">Full Match History</h2>
+            <div class="table-wrap">
+              <table class="stats-table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Opponent</th>
+                    <th>Score</th>
+                    <th>Competition</th>
+                    <th>Goals</th>
+                    <th>Assists</th>
+                    <th>Rating</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>18 May 2025</td><td>Mechanical Engg.</td><td><span class="score score-win">2-1</span></td><td>Inter-Department League</td><td>1</td><td>1</td><td>7.8</td></tr>
+                  <tr><td>14 May 2025</td><td>Business Studies</td><td><span class="score score-win">1-0</span></td><td>Inter-Department League</td><td>1</td><td>0</td><td>7.5</td></tr>
+                  <tr><td>10 May 2025</td><td>Electrical Engg.</td><td><span class="score score-loss">0-2</span></td><td>University Cup</td><td>0</td><td>0</td><td>6.2</td></tr>
+                  <tr><td>05 May 2025</td><td>Civil Engineering</td><td><span class="score score-win">3-1</span></td><td>Inter-Department League</td><td>2</td><td>1</td><td>8.1</td></tr>
+                  <tr><td>28 Apr 2025</td><td>Arts Faculty</td><td><span class="score score-draw">1-1</span></td><td>Friendly Match</td><td>1</td><td>0</td><td>7.0</td></tr>
+                  <tr><td>20 Apr 2025</td><td>Law Faculty</td><td><span class="score score-win">2-0</span></td><td>Inter-Department League</td><td>0</td><td>2</td><td>7.4</td></tr>
+                  <tr><td>12 Apr 2025</td><td>Medicine Dept.</td><td><span class="score score-win">3-2</span></td><td>University Cup</td><td>2</td><td>0</td><td>7.9</td></tr>
+                  <tr><td>05 Apr 2025</td><td>Architecture</td><td><span class="score score-draw">0-0</span></td><td>Friendly Match</td><td>0</td><td>0</td><td>6.8</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB: BIO -->
+        <div class="tab-panel" id="tab-bio">
+          <div class="panel-card">
+            <h2 class="panel-title">Player Biography</h2>
+            <p class="bio-intro" style="margin-bottom:24px">Arjun Verma is a dynamic midfielder known for his vision, passing accuracy, and leadership on the field. He has been an integral part of the university football team since his first year.</p>
+            <table class="bio-table">
+              <tbody>
+                <tr><td class="bio-key">Full Name</td><td class="bio-val">Arjun Verma</td></tr>
+                <tr><td class="bio-key">Date of Birth</td><td class="bio-val">12 March 2004</td></tr>
+                <tr><td class="bio-key">Email</td><td class="bio-val">arjun.verma@northfield.edu</td></tr>
+                <tr><td class="bio-key">Phone</td><td class="bio-val">+91 98765 43210</td></tr>
+                <tr><td class="bio-key">Department</td><td class="bio-val">Computer Science</td></tr>
+                <tr><td class="bio-key">Academic Year</td><td class="bio-val">3rd Year (2023–2026)</td></tr>
+                <tr><td class="bio-key">Position</td><td class="bio-val">Midfielder</td></tr>
+                <tr><td class="bio-key">Jersey Number</td><td class="bio-val">#10</td></tr>
+                <tr><td class="bio-key">Nationality</td><td class="bio-val">Indian</td></tr>
+                <tr><td class="bio-key">Achievements</td><td class="bio-val">Best Midfielder 2024, Top Scorer 2024</td></tr>
+                <tr><td class="bio-key">Interests</td><td class="bio-val">Reading, Fitness, Music</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
