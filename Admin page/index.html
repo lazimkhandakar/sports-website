@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — Northfield University Sports</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       APP SHELL
+  ══════════════════════════════════════════ -->
+  <div class="app-shell">
+
+    <!-- ── SIDEBAR ── -->
+    <aside class="sidebar" id="sidebar">
+
+      <!-- Logo -->
+      <a href="index.html" class="sidebar-logo">
+        <div class="logo-icon">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <rect width="36" height="36" rx="5" fill="rgba(255,255,255,0.12)"/>
+            <path d="M18 6L21 14H29L23 19L25 27L18 22.5L11 27L13 19L7 14H15L18 6Z" fill="white" opacity="0.9"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-main">NORTHFIELD</span>
+          <span class="logo-sub">UNIVERSITY</span>
+        </div>
+      </a>
+
+      <!-- Nav -->
+      <nav class="sidebar-nav">
+        <a href="index.html" class="nav-item active" data-label="Dashboard">
+          <span class="nav-icon">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+              <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+            </svg>
+          </span>
+          <span class="nav-label">Dashboard</span>
+        </a>
+        <a href="../Fixtures page/index.html" class="nav-item" data-label="Fixtures">
+          <span class="nav-icon">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <rect x="3" y="4" width="18" height="18" rx="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </span>
+          <span class="nav-label">Fixtures</span>
+        </a>
+        <a href="../Players page/index.html" class="nav-item" data-label="Players">
+          <span class="nav-icon">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </span>
+          <span class="nav-label">Players</span>
+        </a>
+        <a href="../Teams page/index.html" class="nav-item" data-label="Teams">
+          <span class="nav-icon">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+              <path d="M16 3.13a4 4 0 010 7.75"/>
+            </svg>
+          </span>
+          <span class="nav-label">Teams</span>
+        </a>
+        <a href="#" class="nav-item" data-label="Results">
+          <span class="nav-icon">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="12" cy="8" r="6"/>
+              <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
+            </svg>
+          </span>
+          <span class="nav-label">Results</span>
+        </a>
+        <a href="#" class="nav-item" data-label="Reports">
+          <span class="nav-icon">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <line x1="18" y1="20" x2="18" y2="10"/>
+              <line x1="12" y1="20" x2="12" y2="4"/>
+              <line x1="6"  y1="20" x2="6"  y2="14"/>
+            </svg>
+          </span>
+          <span class="nav-label">Reports</span>
+        </a>
+        <a href="#" class="nav-item" data-label="Settings">
+          <span class="nav-icon">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/>
+            </svg>
+          </span>
+          <span class="nav-label">Settings</span>
+        </a>
+      </nav>
+
+      <!-- User -->
+      <div class="sidebar-user" id="sidebarUser">
+        <div class="user-avatar">AU</div>
+        <div class="user-info">
+          <span class="user-name">Admin User</span>
+          <span class="user-role">Sports Administrator</span>
+        </div>
+        <button class="user-chevron" id="userChevron">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+      </div>
+
+    </aside>
+
+    <!-- ── MAIN CONTENT ── -->
+    <div class="main-content">
+
+      <!-- Top bar -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <line x1="3" y1="6"  x2="21" y2="6"/>
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+          <div>
+            <h1 class="topbar-title">Welcome back, Admin</h1>
+            <p class="topbar-sub">Here's what's happening with Northfield University Sports.</p>
+          </div>
+        </div>
+        <div class="topbar-right">
+          <button class="notif-btn" id="notifBtn" aria-label="Notifications">
+            <svg width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+              <path d="M13.73 21a2 2 0 01-3.46 0"/>
+            </svg>
+            <span class="notif-badge">3</span>
+          </button>
+          <div class="season-select-wrap">
+            <select class="season-select" id="seasonSelect">
+              <option value="2024-25">2024–25 Season</option>
+              <option value="2023-24">2023–24 Season</option>
+              <option value="2022-23">2022–23 Season</option>
+            </select>
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </div>
+      </header>
+
+      <!-- Page body -->
+      <div class="page-body">
+
+        <!-- ── STAT CARDS ── -->
+        <div class="stat-cards">
+
+          <div class="stat-card">
+            <div class="sc-icon-wrap" style="background:#eff6ff;border-color:#bfdbfe">
+              <svg width="26" height="26" fill="none" stroke="#3b82f6" stroke-width="1.8" viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
+              </svg>
+            </div>
+            <div class="sc-body">
+              <div class="sc-label">TOTAL PLAYERS</div>
+              <div class="sc-num" data-target="512">0</div>
+              <div class="sc-change positive">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+                12% from last season
+              </div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="sc-icon-wrap" style="background:#f0fdf4;border-color:#bbf7d0">
+              <svg width="26" height="26" fill="none" stroke="#22c55e" stroke-width="1.8" viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </div>
+            <div class="sc-body">
+              <div class="sc-label">UPCOMING MATCHES</div>
+              <div class="sc-num" data-target="18">0</div>
+              <div class="sc-change neutral">Next match in 2 days</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="sc-icon-wrap" style="background:#f5f3ff;border-color:#ddd6fe">
+              <svg width="26" height="26" fill="none" stroke="#8b5cf6" stroke-width="1.8" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 8v4l3 3"/>
+              </svg>
+            </div>
+            <div class="sc-body">
+              <div class="sc-label">SPORTS REGISTERED</div>
+              <div class="sc-num" data-target="12">0</div>
+              <div class="sc-change neutral">Across 8 departments</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="sc-icon-wrap" style="background:#fffbeb;border-color:#fde68a">
+              <svg width="26" height="26" fill="none" stroke="#f59e0b" stroke-width="1.8" viewBox="0 0 24 24">
+                <line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/>
+                <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/>
+                <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/>
+                <line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/>
+                <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/>
+                <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/>
+              </svg>
+            </div>
+            <div class="sc-body">
+              <div class="sc-label">DEPARTMENTS</div>
+              <div class="sc-num" data-target="8">0</div>
+              <div class="sc-change neutral">Active departments</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ── TWO COLUMN ROW ── -->
+        <div class="two-col">
+
+          <!-- Upcoming Fixtures -->
+          <div class="panel">
+            <div class="panel-header">
+              <div class="panel-title-wrap">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                <span class="panel-title">Upcoming Fixtures</span>
+              </div>
+              <a href="../Fixtures page/index.html" class="panel-link">View All Fixtures →</a>
+            </div>
+
+            <table class="panel-table" id="fixturesTable">
+              <thead>
+                <tr>
+                  <th>DATE &amp; TIME</th>
+                  <th>SPORT</th>
+                  <th>FIXTURE</th>
+                  <th>VENUE</th>
+                  <th>ACTION</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Injected by JS -->
+              </tbody>
+            </table>
+
+            <div class="panel-footer">
+              <a href="../Fixtures page/index.html" class="panel-footer-btn">View All Fixtures</a>
+            </div>
+          </div>
+
+          <!-- Recent Player Registrations -->
+          <div class="panel">
+            <div class="panel-header">
+              <div class="panel-title-wrap">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <line x1="19" y1="8" x2="19" y2="14"/>
+                  <line x1="22" y1="11" x2="16" y2="11"/>
+                </svg>
+                <span class="panel-title">Recent Player Registrations</span>
+              </div>
+              <a href="../Players page/index.html" class="panel-link">View All Players →</a>
+            </div>
+
+            <table class="panel-table" id="playersTable">
+              <thead>
+                <tr>
+                  <th>PLAYER</th>
+                  <th>SPORT</th>
+                  <th>DEPARTMENT</th>
+                  <th>REGISTERED ON</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Injected by JS -->
+              </tbody>
+            </table>
+
+            <div class="panel-footer">
+              <a href="../Players page/index.html" class="panel-footer-btn">View All Players</a>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /page-body -->
+    </div><!-- /main-content -->
+  </div><!-- /app-shell -->
+
+  <script src="script.js"></script>
+</body>
+</html>
